@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Button Page</title>
+    <style>
+        /* General Styles for Desktop */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000; /* Optional: Set background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            max-width: 1920px;
+            max-height: 1080px;
+            background-image: url('download.jpeg'); /* Use forward slashes or escaped backslashes */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .contact-button {
+            position: absolute;
+            bottom: -2%; /* Adjust position for desktop */
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            z-index: 2; /* Ensure it's above other elements */
+            border: none;
+            background: none;
+        }
+
+        .contact-button img {
+            width: 415px; /* Default button width for desktop */
+            height: 107px;
+        }
+
+        /* Tablet Styles */
+        @media (max-width: 768px) {
+            .container {
+                background-size: cover;
+                background-position: center center;
+            }
+
+            .contact-button {
+                bottom: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .contact-button img {
+                width: 150px; /* Smaller button size for tablets */
+                height: auto;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 480px) {
+            .container {
+                background-size: cover;
+                background-position: center center;
+            }
+
+            .contact-button {
+                bottom: 5%; /* Adjust button position */
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .contact-button img {
+                width: 120px; /* Even smaller button for phones */
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://clixtherapy.com/contact-us/" target="_blank" class="contact-button">
+            <img src="contactb.jpg" alt="Contact Button">
+        </a>
+    </div>
+</body>
+</html>
